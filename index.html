@@ -8,7 +8,7 @@
         */
         window.GLOBAL_CONFIG = {
             SCF_GATEWAY: "https://uuu.uu8.workers.dev/",
-            SITE_NAME: "The index from GYS",
+            SITE_NAME: "FODI",
             IS_CF: true
         };
         if (window.GLOBAL_CONFIG.SCF_GATEWAY.indexOf('workers') === -1) {
@@ -1255,14 +1255,9 @@
             }
         });
     </script>
-<style>
-.hitokoto {
-  margin: 0 auto;
-}
-</style></head>
+</head>
 
 <body hidden="hidden">
-<div id="hitokoto"></div>
     <template id="tree-node-wrapper-template">
         <div class="tree-node-wrapper">
             <div class="tree-node">
@@ -1338,5 +1333,5 @@
         </div>
     </div>
 </body>
-<script> fetch('https://v1.hitokoto.cn') .then(response => response.json()) .then(data => { const hitokoto = document.getElementById('hitokoto'); hitokoto.innerText = data.hitokoto; }) .catch(err => console.error(err)); </script>
+
 </html>
