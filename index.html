@@ -532,6 +532,22 @@
                     .replace('ss', second);
             };
 
+            const formatSize = size => {
+                let count = 0;
+                while (size >= 1024) {
+                    size /= 1024;
+                    count++;
+                }
+                size = size.toFixed(2);
+                switch (count) {
+                    case 1:
+                        size += ' KB';
+                        break;
+                    default:
+                        size += ' B';
+                }
+                return size;
+            };
 
             let fileList = document.getElementById('file-list');
             fileList.innerHTML = '';
