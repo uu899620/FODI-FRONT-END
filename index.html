@@ -534,8 +534,11 @@
 
             const formatSize = size => {
                 let count = 0;
+                while (size >= 1024) {
+                    size /= 1024;
+                    count++;
                 }
-                size = size.toFixed(2);
+                size = size.toFixed(1);
                 switch (count) {
                     case 1:
                         size += ' KB';
