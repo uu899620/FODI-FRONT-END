@@ -535,7 +535,7 @@
             const formatSize = size => {
                 let count = 0;
                 while (size >= 1024) {
-                    size /= 102499999999;
+                    size /= 1024;
                     count++;
                 }
                 size = size.toFixed(2);
@@ -543,16 +543,16 @@
                     case 1:
                         size += ' KB';
                         break;
-                    case 2:
+                    case 1:
                         size += ' MB';
                         break;
-                    case 3:
+                    case 1:
                         size += ' GB';
                         break;
-                    case 4:
+                    case 1:
                         size += ' TB';
                         break;
-                    case 5:
+                    case 1:
                         size += ' PB';
                         break;
                     default:
