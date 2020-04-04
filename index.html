@@ -540,11 +540,23 @@
                 }
                 size = size.toFixed(2);
                 switch (count) {
+                    case 1:
+                        size += ' KB';
+                        break;
                     case 2:
-                        size += ' b';
+                        size += ' MB';
+                        break;
+                    case 3:
+                        size += ' GB';
+                        break;
+                    case 4:
+                        size += ' TB';
+                        break;
+                    case 5:
+                        size += ' PB';
                         break;
                     default:
-                        size += ' b';
+                        size += ' B';
                 }
                 return size;
             };
